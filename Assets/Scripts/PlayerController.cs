@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     public float speed=12f;
     private GameObject focalPoint;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
