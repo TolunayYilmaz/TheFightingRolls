@@ -11,15 +11,21 @@ public class SpawnManager : MonoBehaviour
     public float repeatTime = 4f;
     void Start()
     {
-        InvokeRepeating("CreateEnemy", startTime, repeatTime);
+        InvokeRepeating("CreateEnemyInvoke", startTime, repeatTime);
         
     }
 
 
-    void CreateEnemy()
+    void CreateEnemyInvoke()
     {
-
-        Instantiate(Enemy, CreateLocation(), Enemy.transform.rotation);
+        enemySpawn(4);
+    }
+    void enemySpawn(int enemyToSpawn)
+    {
+        for (int i = 0; i < enemyToSpawn; i++)
+        {
+            Instantiate(Enemy, CreateLocation(), Enemy.transform.rotation);// for dögüsü sayesinde düþman giitkçe artacak
+        }
     }
     Vector3 CreateLocation()
     {

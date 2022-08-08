@@ -21,4 +21,5 @@ public class Enemy : MonoBehaviour
     { Vector3 lookDirection = (player.position - transform.position).normalized;
         rbEnemy.AddForce(lookDirection*speed*Time.deltaTime);
     }
+   
 }
