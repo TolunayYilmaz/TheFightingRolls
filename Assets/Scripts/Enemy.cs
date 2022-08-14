@@ -20,6 +20,10 @@ public class Enemy : MonoBehaviour
     void Update()
     { Vector3 lookDirection = (player.position - transform.position).normalized;
         rbEnemy.AddForce(lookDirection*speed*Time.deltaTime);
+        if(transform.position.y < -2)
+        {
+            GameObject.Destroy(gameObject);       
+        }
     }
    
 }
